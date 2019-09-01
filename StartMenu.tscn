@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://StartMenu.gd" type="Script" id=1]
+[ext_resource path="res://BackGround.png" type="Texture" id=2]
+[ext_resource path="res://LinkButton.gd" type="Script" id=3]
+[ext_resource path="res://TerraSuperfície.png" type="Texture" id=4]
+[ext_resource path="res://padoru.png" type="Texture" id=5]
+[ext_resource path="res://padoru_maki.png" type="Texture" id=6]
+
+[node name="StartMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="BackGround" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 1000.19, 541.683 )
+scale = Vector2( 28.7001, 33.5015 )
+texture = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 914.0
+margin_top = 542.0
+margin_right = 1165.0
+margin_bottom = 676.0
+rect_scale = Vector2( 4, 4 )
+
+[node name="StartGame" type="Button" parent="VBoxContainer"]
+margin_right = 251.0
+margin_bottom = 20.0
+text = "Start Game"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 251.0
+margin_bottom = 44.0
+text = "Quit"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 251.0
+margin_bottom = 79.0
+text = "NicolasLFerreira
+Made using Godot Engine"
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer"]
+margin_top = 83.0
+margin_right = 251.0
+margin_bottom = 97.0
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="VBoxContainer/LinkButton"]
+position = Vector2( 125.722, 7.22057 )
+scale = Vector2( 7.86903, 0.440488 )
+texture = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 998.626, 540.589 )
+current = true
+zoom = Vector2( 1.8, 1.8 )
+
+[node name="Toshino" type="Sprite" parent="."]
+position = Vector2( 177.908, 976.285 )
+texture = ExtResource( 5 )
+
+[node name="Maki" type="Sprite" parent="."]
+position = Vector2( 532.433, 978.925 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 6 )
+flip_h = true
+[connection signal="pressed" from="VBoxContainer/StartGame" to="." method="_on_StartGame_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/LinkButton" to="VBoxContainer/LinkButton" method="_on_LinkButton_pressed"]

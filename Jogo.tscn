@@ -1,0 +1,153 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Tile.tres" type="TileSet" id=1]
+[ext_resource path="res://Player1.gd" type="Script" id=2]
+[ext_resource path="res://padoru.png" type="Texture" id=3]
+[ext_resource path="res://head_area_t.gd" type="Script" id=4]
+[ext_resource path="res://Player2.gd" type="Script" id=5]
+[ext_resource path="res://padoru_maki.png" type="Texture" id=6]
+[ext_resource path="res://head_area_m.gd" type="Script" id=7]
+[ext_resource path="res://Control.gd" type="Script" id=8]
+[ext_resource path="res://Quit.png" type="Texture" id=9]
+[ext_resource path="res://Back.png" type="Texture" id=10]
+[ext_resource path="res://VarAndConst.gd" type="Script" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 18.8184, 0.137878 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 18.7302, 1.99002 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 12.4863, 22.4365 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 18.826, 29.1413 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 18.5435, 0.217957 )
+
+[node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -1900517, 1, 0, -1572891, 0, 0, -1572890, 0, 0, -1572889, 0, 0, -1572888, 0, 0, -1572887, 0, 0, -1572886, 0, 0, -1572885, 0, 0, -1572884, 0, 0, -1572883, 0, 0, -1572882, 0, 0, -1572881, 0, 0, -1572880, 0, 0, -1572879, 0, 0, -1572878, 0, 0, -1572877, 0, 0, -1572876, 0, 0, -1572875, 0, 0, -1572874, 0, 0, -1572873, 0, 0, -1572872, 0, 0, -1572871, 0, 0, -1572870, 0, 0, -1572869, 0, 0, -1572868, 0, 0, -1572867, 0, 0, -1572866, 0, 0, -1572865, 0, 0, -1638400, 0, 0, -1638399, 0, 0, -1638398, 0, 0, -1638397, 0, 0, -1638396, 0, 0, -1507355, 0, 0, -1507341, 1, 0, -1507340, 2, 0, -1507339, 1, 0, -1507338, 2, 0, -1572860, 0, 0, -1441819, 0, 0, -1507324, 0, 0, -1376283, 0, 0, -1441788, 0, 0, -1310747, 0, 0, -1310746, 0, 0, -1310745, 0, 0, -1310744, 0, 0, -1376255, 0, 0, -1376254, 0, 0, -1376253, 0, 0, -1376252, 0, 0, -1245211, 0, 0, -1310716, 0, 0, -1179675, 0, 0, -1245180, 0, 0, -1114139, 0, 0, -1114129, 0, 0, -1114128, 0, 0, -1114127, 0, 0, -1114126, 0, 0, -1114121, 0, 0, -1114120, 0, 0, -1114119, 0, 0, -1114118, 0, 0, -1179644, 0, 0, -1048603, 0, 0, -1114108, 0, 0, -983067, 0, 0, -1048572, 0, 0, -917531, 0, 0, -917530, 0, 0, -917529, 0, 0, -917528, 0, 0, -983039, 0, 0, -983038, 0, 0, -983037, 0, 0, -983036, 0, 0, -851995, 0, 0, -917500, 0, 0, -786459, 0, 0, -786453, 0, 0, -786452, 0, 0, -786451, 0, 0, -786450, 0, 0, -786445, 0, 0, -786444, 0, 0, -786443, 0, 0, -786442, 0, 0, -786437, 0, 0, -786436, 0, 0, -786435, 0, 0, -786434, 0, 0, -851964, 0, 0, -720923, 0, 0, -786428, 0, 0, -655387, 0, 0, -720892, 0, 0, -589851, 0, 0, -655356, 0, 0, -524315, 0, 0, -589820, 0, 0, -458779, 0, 0, -458778, 0, 0, -458777, 0, 0, -458776, 0, 0, -458775, 0, 0, -458774, 0, 0, -458773, 0, 0, -458772, 0, 0, -458771, 0, 0, -458770, 0, 0, -458769, 0, 0, -458768, 0, 0, -458767, 0, 0, -458766, 0, 0, -458765, 0, 0, -458764, 0, 0, -458763, 0, 0, -458762, 0, 0, -458761, 0, 0, -458760, 0, 0, -458759, 0, 0, -458758, 0, 0, -458757, 0, 0, -458756, 0, 0, -458755, 0, 0, -458754, 0, 0, -458753, 0, 0, -524288, 0, 0, -524287, 0, 0, -524286, 0, 0, -524285, 0, 0, -524284, 0, 0 )
+
+[node name="Toshino" type="KinematicBody2D" parent="."]
+position = Vector2( 96.4585, -730.206 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Toshino"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="head_area_t" type="Area2D" parent="Toshino"]
+editor/display_folded = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="head_colision_t" type="CollisionShape2D" parent="Toshino/head_area_t"]
+position = Vector2( -3.53918, -27.3951 )
+shape = SubResource( 1 )
+
+[node name="foot_area_t" type="Area2D" parent="Toshino"]
+editor/display_folded = true
+position = Vector2( -3.61829, 29.5737 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="foot_colision_t" type="CollisionShape2D" parent="Toshino/foot_area_t"]
+shape = SubResource( 2 )
+
+[node name="Colision1" type="CollisionShape2D" parent="Toshino"]
+position = Vector2( -3.56863, 1.93774 )
+scale = Vector2( 1.5, 1.3 )
+shape = SubResource( 3 )
+
+[node name="Maki" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( -798.497, -726.96 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Maki"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Maki"]
+position = Vector2( 0.454102, 0 )
+shape = SubResource( 4 )
+
+[node name="head_area_m" type="Area2D" parent="Maki"]
+editor/display_folded = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="head_colision_m" type="CollisionShape2D" parent="Maki/head_area_m"]
+position = Vector2( 0.397522, -29.4034 )
+shape = SubResource( 5 )
+
+[node name="foot_area_m" type="Area2D" parent="Maki"]
+editor/display_folded = true
+position = Vector2( 0.50885, 27.5183 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="foot_colision_m" type="CollisionShape2D" parent="Maki/foot_area_m"]
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -349.741, -505.46 )
+scale = Vector2( 0.7, 0.7 )
+current = true
+
+[node name="Control" type="Control" parent="."]
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 8 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+margin_left = -406.0
+margin_top = -770.0
+margin_right = -300.0
+margin_bottom = -750.0
+alignment = 1
+
+[node name="InGameQuit" type="Button" parent="Control/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 20.0
+text = "Quit"
+icon = ExtResource( 9 )
+
+[node name="MainMenu" type="Button" parent="Control/HBoxContainer"]
+margin_left = 54.0
+margin_right = 106.0
+margin_bottom = 20.0
+text = "Back"
+icon = ExtResource( 10 )
+
+[node name="VarAndConst" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 11 )
+[connection signal="area_entered" from="Toshino/head_area_t" to="Toshino/head_area_t" method="_on_head_area_t_area_entered"]
+[connection signal="area_entered" from="Maki/head_area_m" to="Maki/head_area_m" method="_on_head_area_m_area_entered"]
+[connection signal="pressed" from="Control/HBoxContainer/InGameQuit" to="Control" method="_on_InGameQuit_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/MainMenu" to="Control" method="_on_MainMenu_pressed"]

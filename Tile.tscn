@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://TerraSuperfície.png" type="Texture" id=1]
+[ext_resource path="res://DirtUnderground1.png" type="Texture" id=2]
+[ext_resource path="res://DirtUnderground2.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10.6667, 10.6667 )
+
+[node name="Tile" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 40, 40 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 40, -130 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( -130, -130 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite3/StaticBody2D"]
+scale = Vector2( 1.5, 1.5 )
+shape = SubResource( 2 )
