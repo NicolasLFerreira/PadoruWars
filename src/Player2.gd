@@ -13,6 +13,9 @@ onready var power_speed = get_parent().get_node("VarAndConst").power_speed
 onready var power_max_speed = get_parent().get_node("VarAndConst").power_max_speed
 onready var power_jump_speed = get_parent().get_node("VarAndConst").power_jump_speed
 onready var power_gravity = get_parent().get_node("VarAndConst").power_gravity
+
+onready var power_min_cap = get_parent().get_node("VarAndConst").power_min_cap
+onready var power_max_cap = get_parent().get_node("VarAndConst").power_max_cap 
  
 #VAR_A
 
@@ -31,12 +34,12 @@ func getinput():
 		power += 20
 		print(power);
 	
-	if power >= 12000 and power <= 27500:
+	if power >= power_min_cap and power <= power_max_cap :
 		speed = power_speed
 		max_speed = power_max_speed
 		jump_speed = power_jump_speed
 		gravity = power_gravity
-	elif power >= 27500:
+	elif power >= power_max_cap :
 		power = 0
 		speed = speed_a
 		max_speed = max_speed_a

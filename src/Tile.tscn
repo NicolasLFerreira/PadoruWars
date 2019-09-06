@@ -14,7 +14,7 @@ extents = Vector2( 10.6667, 10.6667 )
 
 [node name="Sprite" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 40, 40 )
+position = Vector2( 40, -300 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -30,7 +30,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 40, -130 )
+position = Vector2( -130, -130 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -46,7 +46,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( -130, -130 )
+position = Vector2( 40, -130 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 3 )
 region_enabled = true
